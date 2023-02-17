@@ -2,7 +2,7 @@
 //  IMU.swift
 //  SwiftyScience
 //
-//  Created by Tomer Zilbershtein on 2/17/23.
+//  Created by Ocean on 2/17/23.
 //
 
 import SwiftUI

@@ -2,7 +2,7 @@
 //  Gyroscope.swift
 //  SwiftyScience
 //
-//  Created by Tomer Zilbershtein on 2/16/23.
+//  Created by Ocean on 2/16/23.
 //
 
 import SwiftUI
