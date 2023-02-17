@@ -15,6 +15,12 @@
 		548EE188299F490B0029A3EB /* Magnetometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE187299F490B0029A3EB /* Magnetometer.swift */; };
 		548EE18A299F49190029A3EB /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE189299F49190029A3EB /* Accelerometer.swift */; };
 		548EE18E299F49AC0029A3EB /* IMU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE18D299F49AC0029A3EB /* IMU.swift */; };
+		548EE191299F4CED0029A3EB /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE190299F4CED0029A3EB /* Barometer.swift */; };
+		548EE196299F54BB0029A3EB /* BubbleLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE195299F54BB0029A3EB /* BubbleLevel.swift */; };
+		548EE198299F54CE0029A3EB /* MotionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE197299F54CE0029A3EB /* MotionDetector.swift */; };
+		548EE19A299F54F40029A3EB /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE199299F54F40029A3EB /* LevelView.swift */; };
+		548EE19C299F55040029A3EB /* OrientationDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE19B299F55040029A3EB /* OrientationDataView.swift */; };
+		548EE19E299F55270029A3EB /* Ext - Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE19D299F55270029A3EB /* Ext - Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,12 @@
 		548EE187299F490B0029A3EB /* Magnetometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magnetometer.swift; sourceTree = "<group>"; };
 		548EE189299F49190029A3EB /* Accelerometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accelerometer.swift; sourceTree = "<group>"; };
 		548EE18D299F49AC0029A3EB /* IMU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMU.swift; sourceTree = "<group>"; };
+		548EE190299F4CED0029A3EB /* Barometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
+		548EE195299F54BB0029A3EB /* BubbleLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleLevel.swift; sourceTree = "<group>"; };
+		548EE197299F54CE0029A3EB /* MotionDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDetector.swift; sourceTree = "<group>"; };
+		548EE199299F54F40029A3EB /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		548EE19B299F55040029A3EB /* OrientationDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationDataView.swift; sourceTree = "<group>"; };
+		548EE19D299F55270029A3EB /* Ext - Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext - Double.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,8 @@
 				548EE177299F3DB70029A3EB /* SwiftyScienceApp.swift */,
 				548EE18F299F49C60029A3EB /* IMU */,
 				548EE179299F3DB70029A3EB /* ContentView.swift */,
+				548EE194299F53A60029A3EB /* Bubble Level */,
+				548EE190299F4CED0029A3EB /* Barometer.swift */,
 				548EE17B299F3DB80029A3EB /* Assets.xcassets */,
 				548EE17D299F3DB80029A3EB /* Preview Content */,
 			);
@@ -85,6 +99,18 @@
 				548EE185299F3DD90029A3EB /* Gyroscope.swift */,
 			);
 			path = IMU;
+			sourceTree = "<group>";
+		};
+		548EE194299F53A60029A3EB /* Bubble Level */ = {
+			isa = PBXGroup;
+			children = (
+				548EE195299F54BB0029A3EB /* BubbleLevel.swift */,
+				548EE199299F54F40029A3EB /* LevelView.swift */,
+				548EE19B299F55040029A3EB /* OrientationDataView.swift */,
+				548EE19D299F55270029A3EB /* Ext - Double.swift */,
+				548EE197299F54CE0029A3EB /* MotionDetector.swift */,
+			);
+			path = "Bubble Level";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,12 +183,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				548EE196299F54BB0029A3EB /* BubbleLevel.swift in Sources */,
 				548EE186299F3DD90029A3EB /* Gyroscope.swift in Sources */,
+				548EE198299F54CE0029A3EB /* MotionDetector.swift in Sources */,
 				548EE18E299F49AC0029A3EB /* IMU.swift in Sources */,
 				548EE188299F490B0029A3EB /* Magnetometer.swift in Sources */,
+				548EE19C299F55040029A3EB /* OrientationDataView.swift in Sources */,
 				548EE18A299F49190029A3EB /* Accelerometer.swift in Sources */,
 				548EE17A299F3DB70029A3EB /* ContentView.swift in Sources */,
+				548EE191299F4CED0029A3EB /* Barometer.swift in Sources */,
 				548EE178299F3DB70029A3EB /* SwiftyScienceApp.swift in Sources */,
+				548EE19E299F55270029A3EB /* Ext - Double.swift in Sources */,
+				548EE19A299F54F40029A3EB /* LevelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

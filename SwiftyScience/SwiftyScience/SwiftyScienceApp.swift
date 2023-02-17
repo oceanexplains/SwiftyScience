@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct SwiftyScienceApp: App {
+    
+    @StateObject private var motionDetector = MotionDetector(updateInterval: 0.01) //BubbleLevel
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            LevelView()
+                            .environmentObject(motionDetector)
         }
     }
 }
