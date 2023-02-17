@@ -31,9 +31,9 @@ struct CalculatorView: View {
                 .padding(10)
             //Spacer()
             
-            HStack {
-                Grid {
-                    GridRow {
+            HStack(spacing: 5) {
+                Grid(horizontalSpacing: 5, verticalSpacing: 5) {
+                    GridRow{
                         Button("(") {
                             self.expression += "("
                         }
@@ -50,37 +50,62 @@ struct CalculatorView: View {
                         .cornerRadius(10)
                     }
                     GridRow {
-                        Button("sin") {
-                            self.expression += "7"
+                        Button {
+                            //
+                        } label: {
+                            ShiftableButtonView(main: "sin", alt: "1/sin")
                         }
-                        .frame(width: 50, height: 50)
-                        .background(Color.black)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(10)
+                        Button {
+                            //
+                        } label: {
+                            ShiftableButtonView(main: "cos", alt: "1/cos")
+                        }
+                        Button {
+                            //
+                        } label: {
+                            ShiftableButtonView(main: "tan", alt: "1/tan")
+                        }
                     }
                     GridRow {
-                        Button("cos") {
-                            self.expression += "cos"
+                        Button {
+                            //
+                        } label: {
+                            ShiftableButtonView(main: "sinh", alt: "1/sinh")
                         }
-                        .frame(width: 50, height: 50)
-                        .background(Color.black)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(10)
-                    }
-                    GridRow {
-                        Button("tan") {
-                            self.expression += "tan"
+                        Button {
+                            //
+                        } label: {
+                            ShiftableButtonView(main: "cosh", alt: "1/cosh")
                         }
-                        .frame(width: 50, height: 50)
-                        .background(Color.black)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(10)
+                        Button {
+                            //
+                        } label: {
+                            ShiftableButtonView(main: "tanh", alt: "1/tanh")
+                        }
                     }
                     GridRow {
                         Button {
                             //
                         } label: {
                             ShiftableButtonView(main: "ln", alt: "e^x")
+                        }
+                        Button {
+                            //
+                        } label: {
+                            ShiftableButtonView(main: "log", alt: "10^x")
+                        }
+                        Button {
+                            //
+                        } label: {
+                            ShiftableButtonView(main: "x^y", alt: "logxy")
+                        }
+                        
+                    }
+                    GridRow {
+                        Button {
+                            //
+                        } label: {
+                            
                         }
                         Button("ln") {
                             self.expression += "ln"
@@ -91,7 +116,7 @@ struct CalculatorView: View {
                         .cornerRadius(10)
                     }
                 }
-                Grid {
+                Grid(horizontalSpacing: 5, verticalSpacing: 5) {
                     GridRow {
                         Button("7") {
                             self.expression += "7"
