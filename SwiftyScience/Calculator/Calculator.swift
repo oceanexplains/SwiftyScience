@@ -7,17 +7,49 @@
 
 import SwiftUI
 import MathExpression
-import MathParser
 
 
 
 struct Calculator: View {
-    @State private var expression = "0"
-    @State private var result = "0"
+    @State private var history = ""
+    @State private var expression = ""
+    @State private var result = ""
     
     var body: some View {
         VStack {
+            Text(expression)
+            Text(result)
             Grid(horizontalSpacing: 5, verticalSpacing: 5) {
+                GridRow {
+                    Button("c") {
+                        self.expression = ""
+                    }
+                    .frame(width: 50, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
+                    Button("ce") {
+                        self.history = ""
+                    }
+                    .frame(width: 50, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
+                    Button("(") {
+                        self.expression += "("
+                    }
+                    .frame(width: 50, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
+                    Button(")") {
+                        self.expression += ")"
+                    }
+                    .frame(width: 50, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
+                }
                 GridRow {
                     Button("7") {
                         self.expression += "7"
@@ -144,7 +176,7 @@ struct Calculator: View {
                     .cornerRadius(10)
                     .gridCellColumns(2)
                     Button("=") {
-                        self.expression += "="
+                        evaluateExpression()
                     }
                     .frame(width: 110, height: 50)
                     .background(Color.orange)
