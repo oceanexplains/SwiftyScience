@@ -25,6 +25,9 @@
 		548EE19E299F55270029A3EB /* Ext - Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE19D299F55270029A3EB /* Ext - Double.swift */; };
 		548EE1A3299F57BC0029A3EB /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE1A2299F57BC0029A3EB /* CalculatorView.swift */; };
 		548EE1A5299F63840029A3EB /* ShiftableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE1A4299F63840029A3EB /* ShiftableButton.swift */; };
+		54FEFC9329A1BBFE0079E46E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9229A1BBFE0079E46E /* Timer.swift */; };
+		54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9429A1BC190079E46E /* Stopwatch.swift */; };
+		54FEFC9729A1BC430079E46E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9629A1BC430079E46E /* Clock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		548EE19D299F55270029A3EB /* Ext - Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext - Double.swift"; sourceTree = "<group>"; };
 		548EE1A2299F57BC0029A3EB /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		548EE1A4299F63840029A3EB /* ShiftableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftableButton.swift; sourceTree = "<group>"; };
+		54FEFC9229A1BBFE0079E46E /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		54FEFC9429A1BC190079E46E /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		54FEFC9629A1BC430079E46E /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		548EE176299F3DB70029A3EB /* SwiftyScience */ = {
 			isa = PBXGroup;
 			children = (
+				54FEFC9129A1BBEB0079E46E /* Clock */,
 				548EE19F299F57950029A3EB /* Calculator */,
 				548EE177299F3DB70029A3EB /* SwiftyScienceApp.swift */,
 				548EE18F299F49C60029A3EB /* IMU */,
@@ -130,6 +137,16 @@
 				548EE1A4299F63840029A3EB /* ShiftableButton.swift */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		54FEFC9129A1BBEB0079E46E /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				54FEFC9229A1BBFE0079E46E /* Timer.swift */,
+				54FEFC9429A1BC190079E46E /* Stopwatch.swift */,
+				54FEFC9629A1BC430079E46E /* Clock.swift */,
+			);
+			path = Clock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,11 +230,14 @@
 				548EE198299F54CE0029A3EB /* MotionDetector.swift in Sources */,
 				548EE18E299F49AC0029A3EB /* IMU.swift in Sources */,
 				548EE188299F490B0029A3EB /* Magnetometer.swift in Sources */,
+				54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */,
 				548EE19C299F55040029A3EB /* OrientationDataView.swift in Sources */,
 				548EE1A5299F63840029A3EB /* ShiftableButton.swift in Sources */,
+				54FEFC9329A1BBFE0079E46E /* Timer.swift in Sources */,
 				548EE18A299F49190029A3EB /* Accelerometer.swift in Sources */,
 				548BB2FF29A0B33A00899AD6 /* Calculator.swift in Sources */,
 				548EE17A299F3DB70029A3EB /* ContentView.swift in Sources */,
+				54FEFC9729A1BC430079E46E /* Clock.swift in Sources */,
 				548EE191299F4CED0029A3EB /* Barometer.swift in Sources */,
 				548EE178299F3DB70029A3EB /* SwiftyScienceApp.swift in Sources */,
 				548EE1A3299F57BC0029A3EB /* CalculatorView.swift in Sources */,
