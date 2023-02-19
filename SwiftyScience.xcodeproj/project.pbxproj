@@ -87,10 +87,10 @@
 		548EE176299F3DB70029A3EB /* SwiftyScience */ = {
 			isa = PBXGroup;
 			children = (
+				548EE177299F3DB70029A3EB /* SwiftyScienceApp.swift */,
 				54FEFC9A29A1BCA10079E46E /* UI */,
 				54FEFC9129A1BBEB0079E46E /* Clock */,
 				548EE19F299F57950029A3EB /* Calculator */,
-				548EE177299F3DB70029A3EB /* SwiftyScienceApp.swift */,
 				548EE18F299F49C60029A3EB /* IMU */,
 				548EE179299F3DB70029A3EB /* ContentView.swift */,
 				548EE190299F4CED0029A3EB /* Barometer.swift */,

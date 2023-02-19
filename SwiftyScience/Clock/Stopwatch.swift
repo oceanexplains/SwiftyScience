@@ -44,63 +44,75 @@ struct StopwatchView: View {
         VStack {
             Text(time.formattedTimeString())
                 .font(.system(size: 50))
+                .foregroundColor(.white)
             
             HStack {
-                Button(action: {
-                    if self.isRunning {
-                        self.stop()
-                    } else {
-                        self.start()
+                HStack {
+                    SoftButton(title: isRunning ? "Stop" : "Start",
+                               backgroundColor: isRunning ? .red : .blue) {
+                        if self.isRunning {
+                            self.stop()
+                        } else {
+                            self.start()
+                        }
                     }
-                }) {
-                    Text(self.isRunning ? "Stop" : "Start")
-                }
-                .padding()
-                
-                Button(action: {
-                    if self.isRunning {
-                        self.lap()
-                    } else {
-                        self.reset()
+                    .padding()
+                    
+                    SoftButton(title: isRunning ? "Lap" : "Reset",
+                               backgroundColor: isRunning ? .blue : .red) {
+                        if self.isRunning {
+                            self.lap()
+                        } else {
+                            self.reset()
+                        }
                     }
-                }) {
-                    Text(self.isRunning ? "Lap" : "Reset")
+                    .padding()
                 }
-                .padding()
                 
                 Picker(selection: $display, label: Text("Type")) {
                     ForEach(StopwatchDisplayDetails.allCases, id: \.self) { type in
-                        Text(type.rawValue).tag(type)
+                        Text(type.rawValue)
+                            .foregroundColor(display == type ? .red : .white)
+                            .tag(type)
                     }
                 }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
+                .pickerStyle(.segmented)
+                .accentColor(.white)
+
             }
             
-            List {
-                ForEach(laps.reversed(), id: \.self) { lap in
-                    HStack {
-                        switch display {
-                        case .lapTime:
-                            Text("Lap \(lap.lapNumber)")
-                            Spacer()
-                            Text("+\(lap.lapTime.formattedTimeString())")
-                        case .totalTime:
-                            Text("Lap \(lap.lapNumber)")
-                            Spacer()
-                            Text(lap.formattedTotalTimeString())
-                        case .both:
-                            Text("Lap \(lap.lapNumber)")
-                            Spacer()
-                            Text(lap.formattedTotalTimeString())
-                            Spacer()
-                            Text("+\(lap.lapTime.formattedTimeString())")
+            if !laps.isEmpty {
+                List {
+                    ForEach(laps.reversed(), id: \.self) { lap in
+                        HStack {
+                            switch display {
+                            case .lapTime:
+                                Text("Lap \(lap.lapNumber)")
+                                Spacer()
+                                Text("+\(lap.lapTime.formattedTimeString())")
+                            case .totalTime:
+                                Text("Lap \(lap.lapNumber)")
+                                Spacer()
+                                Text(lap.formattedTotalTimeString())
+                            case .both:
+                                Text("Lap \(lap.lapNumber)")
+                                Spacer()
+                                Text(lap.formattedTotalTimeString())
+                                Spacer()
+                                Text("+\(lap.lapTime.formattedTimeString())")
+                            }
                         }
+                        .foregroundColor(.white)
+                        .listRowBackground(Color.black)
                     }
                 }
             }
+            Spacer()
+           
             
         }
+        .background(Color.blue)
+        .scrollContentBackground(.hidden)
     }
 
     func start() {

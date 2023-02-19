@@ -20,7 +20,9 @@ struct ClockView: View {
         VStack {
             Picker(selection: $selectedView, label: Text("Clock Type")) {
                 ForEach(ClockViewType.allCases, id: \.self) { type in
-                    Text(type.rawValue).tag(type)
+                    Text(type.rawValue)
+                        .tag(type)
+                        .foregroundColor(selectedView == type ? .red : .white)
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
@@ -32,7 +34,7 @@ struct ClockView: View {
             case .stopwatch:
                 StopwatchView()
             }
-        }
+        }.background(.black)
     }
 }
 
