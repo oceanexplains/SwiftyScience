@@ -28,6 +28,7 @@
 		54FEFC9329A1BBFE0079E46E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9229A1BBFE0079E46E /* Timer.swift */; };
 		54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9429A1BC190079E46E /* Stopwatch.swift */; };
 		54FEFC9729A1BC430079E46E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9629A1BC430079E46E /* Clock.swift */; };
+		54FEFC9929A1BC8B0079E46E /* SoftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9829A1BC8B0079E46E /* SoftButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		54FEFC9229A1BBFE0079E46E /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		54FEFC9429A1BC190079E46E /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		54FEFC9629A1BC430079E46E /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		54FEFC9829A1BC8B0079E46E /* SoftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		548EE176299F3DB70029A3EB /* SwiftyScience */ = {
 			isa = PBXGroup;
 			children = (
+				54FEFC9A29A1BCA10079E46E /* UI */,
 				54FEFC9129A1BBEB0079E46E /* Clock */,
 				548EE19F299F57950029A3EB /* Calculator */,
 				548EE177299F3DB70029A3EB /* SwiftyScienceApp.swift */,
@@ -134,7 +137,6 @@
 			children = (
 				548EE1A2299F57BC0029A3EB /* CalculatorView.swift */,
 				548BB2FE29A0B33A00899AD6 /* Calculator.swift */,
-				548EE1A4299F63840029A3EB /* ShiftableButton.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -147,6 +149,15 @@
 				54FEFC9629A1BC430079E46E /* Clock.swift */,
 			);
 			path = Clock;
+			sourceTree = "<group>";
+		};
+		54FEFC9A29A1BCA10079E46E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				54FEFC9829A1BC8B0079E46E /* SoftButton.swift */,
+				548EE1A4299F63840029A3EB /* ShiftableButton.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +239,7 @@
 				548EE196299F54BB0029A3EB /* BubbleLevel.swift in Sources */,
 				548EE186299F3DD90029A3EB /* Gyroscope.swift in Sources */,
 				548EE198299F54CE0029A3EB /* MotionDetector.swift in Sources */,
+				54FEFC9929A1BC8B0079E46E /* SoftButton.swift in Sources */,
 				548EE18E299F49AC0029A3EB /* IMU.swift in Sources */,
 				548EE188299F490B0029A3EB /* Magnetometer.swift in Sources */,
 				54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */,
