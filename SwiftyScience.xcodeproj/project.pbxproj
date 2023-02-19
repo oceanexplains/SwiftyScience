@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		548BB2FD29A0B31A00899AD6 /* MathExpression in Frameworks */ = {isa = PBXBuildFile; productRef = 548BB2FC29A0B31A00899AD6 /* MathExpression */; };
+		548BB2FF29A0B33A00899AD6 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BB2FE29A0B33A00899AD6 /* Calculator.swift */; };
 		548EE178299F3DB70029A3EB /* SwiftyScienceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE177299F3DB70029A3EB /* SwiftyScienceApp.swift */; };
 		548EE17A299F3DB70029A3EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE179299F3DB70029A3EB /* ContentView.swift */; };
 		548EE17C299F3DB80029A3EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 548EE17B299F3DB80029A3EB /* Assets.xcassets */; };
@@ -26,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		548BB2FE29A0B33A00899AD6 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		548EE174299F3DB70029A3EB /* SwiftyScience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyScience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		548EE177299F3DB70029A3EB /* SwiftyScienceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyScienceApp.swift; sourceTree = "<group>"; };
 		548EE179299F3DB70029A3EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				548BB2FD29A0B31A00899AD6 /* MathExpression in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				548EE1A2299F57BC0029A3EB /* CalculatorView.swift */,
+				548BB2FE29A0B33A00899AD6 /* Calculator.swift */,
 				548EE1A4299F63840029A3EB /* ShiftableButton.swift */,
 			);
 			path = Calculator;
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = SwiftyScience;
+			packageProductDependencies = (
+				548BB2FC29A0B31A00899AD6 /* MathExpression */,
+			);
 			productName = SwiftyScience;
 			productReference = 548EE174299F3DB70029A3EB /* SwiftyScience.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 548EE16B299F3DB70029A3EB;
+			packageReferences = (
+				548BB2FB29A0B31A00899AD6 /* XCRemoteSwiftPackageReference "MathExpression" */,
+			);
 			productRefGroup = 548EE175299F3DB70029A3EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -205,6 +216,7 @@
 				548EE19C299F55040029A3EB /* OrientationDataView.swift in Sources */,
 				548EE1A5299F63840029A3EB /* ShiftableButton.swift in Sources */,
 				548EE18A299F49190029A3EB /* Accelerometer.swift in Sources */,
+				548BB2FF29A0B33A00899AD6 /* Calculator.swift in Sources */,
 				548EE17A299F3DB70029A3EB /* ContentView.swift in Sources */,
 				548EE191299F4CED0029A3EB /* Barometer.swift in Sources */,
 				548EE178299F3DB70029A3EB /* SwiftyScienceApp.swift in Sources */,
@@ -411,6 +423,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		548BB2FB29A0B31A00899AD6 /* XCRemoteSwiftPackageReference "MathExpression" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/peredaniel/MathExpression.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		548BB2FC29A0B31A00899AD6 /* MathExpression */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 548BB2FB29A0B31A00899AD6 /* XCRemoteSwiftPackageReference "MathExpression" */;
+			productName = MathExpression;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 548EE16C299F3DB70029A3EB /* Project object */;
 }
