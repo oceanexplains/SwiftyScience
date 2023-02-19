@@ -25,6 +25,8 @@ struct ClockView: View {
                         .foregroundColor(selectedView == type ? .red : .white)
                 }
             }
+            .background(Color.white)
+            .clipShape(RoundedRectangle(cornerRadius: 5))
             .pickerStyle(SegmentedPickerStyle())
             .padding()
             Spacer()

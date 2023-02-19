@@ -17,26 +17,38 @@ struct TimerView: View {
     @State private var timeRemaining = 0
     @State private var timer: Timer?
     @State private var isRunning = false
+    @State private var started = false
     
     var body: some View {
         VStack {
+            Text("\(timeRemaining)")
+                .font(.title)
+                .foregroundColor(.white)
+            if self.started {
+                ProgressView(value: CGFloat(timeRemaining) / CGFloat(hours * 3600 + minutes * 60 + seconds))
+                    .frame(height: 20)
+            }
             HStack {
                 Spacer()
                 
-                Button(action: {
+                Button {
                     if self.isRunning {
                         self.pause()
+                    } else if self.started  {
+                        self.play()
                     } else {
                         self.start()
                     }
-                }) {
-                    Text(self.isRunning ? "Pause" : "Start")
+                } label: {
+                    Text(self.isRunning ? "Pause" : self.started ? "Play" : "Start")
                         .padding()
                         .frame(width: 100)
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                .disabled(hours * 3600 + minutes * 60 + seconds <= 0)
+
                 
                 Spacer()
                 
@@ -102,6 +114,23 @@ struct TimerView: View {
     func start() {
         timeRemaining = hours * 3600 + minutes * 60 + seconds
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            if self.timeRemaining <= 1 {
+                self.timeRemaining = 0
+                self.pause()
+            } else {
+                self.timeRemaining -= 1
+            }
+            
+            if self.timeRemaining <= 0 {
+                self.pause()
+            }
+        }
+        isRunning = true
+        started = true
+    }
+    
+    func play() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             self.timeRemaining -= 1
             if self.timeRemaining == 0 {
                 self.pause()
@@ -109,6 +138,7 @@ struct TimerView: View {
         }
         isRunning = true
     }
+    
     
     func pause() {
         timer?.invalidate()
@@ -119,10 +149,14 @@ struct TimerView: View {
     func cancel() {
         timer?.invalidate()
         timer = nil
-        isRunning = false
         hours = 0
         minutes = 0
         seconds = 0
+        started = false
+        if !isRunning {
+            timeRemaining = 0
+        }
+        isRunning = false
     }
 }
 

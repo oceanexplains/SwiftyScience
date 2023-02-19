@@ -46,7 +46,7 @@ struct StopwatchView: View {
                 .font(.system(size: 50))
                 .foregroundColor(.white)
             
-            HStack {
+            VStack {
                 HStack {
                     SoftButton(title: isRunning ? "Stop" : "Start",
                                backgroundColor: isRunning ? .red : .blue) {
@@ -56,7 +56,6 @@ struct StopwatchView: View {
                             self.start()
                         }
                     }
-                    .padding()
                     
                     SoftButton(title: isRunning ? "Lap" : "Reset",
                                backgroundColor: isRunning ? .blue : .red) {
@@ -66,7 +65,6 @@ struct StopwatchView: View {
                             self.reset()
                         }
                     }
-                    .padding()
                 }
                 
                 Picker(selection: $display, label: Text("Type")) {
@@ -76,8 +74,10 @@ struct StopwatchView: View {
                             .tag(type)
                     }
                 }
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
                 .pickerStyle(.segmented)
-                .accentColor(.white)
+                .padding(.horizontal, 20)
 
             }
             
@@ -111,7 +111,7 @@ struct StopwatchView: View {
            
             
         }
-        .background(Color.blue)
+        .background(Color.black)
         .scrollContentBackground(.hidden)
     }
 
