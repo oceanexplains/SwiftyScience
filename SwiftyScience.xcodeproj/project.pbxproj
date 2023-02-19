@@ -29,6 +29,10 @@
 		54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9429A1BC190079E46E /* Stopwatch.swift */; };
 		54FEFC9729A1BC430079E46E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9629A1BC430079E46E /* Clock.swift */; };
 		54FEFC9929A1BC8B0079E46E /* SoftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9829A1BC8B0079E46E /* SoftButton.swift */; };
+		54FEFC9C29A1D1500079E46E /* AuxCalculatorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9B29A1D1500079E46E /* AuxCalculatorButtons.swift */; };
+		54FEFC9E29A1D15C0079E46E /* MainCalculatorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9D29A1D15C0079E46E /* MainCalculatorButtons.swift */; };
+		54FEFCA029A1D5350079E46E /* CalculatorSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9F29A1D5350079E46E /* CalculatorSuggestions.swift */; };
+		54FEFCA429A1D6BE0079E46E /* VarsAndCons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFCA329A1D6BE0079E46E /* VarsAndCons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		54FEFC9429A1BC190079E46E /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		54FEFC9629A1BC430079E46E /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		54FEFC9829A1BC8B0079E46E /* SoftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftButton.swift; sourceTree = "<group>"; };
+		54FEFC9B29A1D1500079E46E /* AuxCalculatorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuxCalculatorButtons.swift; sourceTree = "<group>"; };
+		54FEFC9D29A1D15C0079E46E /* MainCalculatorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCalculatorButtons.swift; sourceTree = "<group>"; };
+		54FEFC9F29A1D5350079E46E /* CalculatorSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSuggestions.swift; sourceTree = "<group>"; };
+		54FEFCA329A1D6BE0079E46E /* VarsAndCons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarsAndCons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,10 @@
 		548EE19F299F57950029A3EB /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				54FEFC9F29A1D5350079E46E /* CalculatorSuggestions.swift */,
+				54FEFC9B29A1D1500079E46E /* AuxCalculatorButtons.swift */,
+				54FEFCA329A1D6BE0079E46E /* VarsAndCons.swift */,
+				54FEFC9D29A1D15C0079E46E /* MainCalculatorButtons.swift */,
 				548EE1A2299F57BC0029A3EB /* CalculatorView.swift */,
 				548BB2FE29A0B33A00899AD6 /* Calculator.swift */,
 			);
@@ -236,10 +248,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FEFC9C29A1D1500079E46E /* AuxCalculatorButtons.swift in Sources */,
+				54FEFCA429A1D6BE0079E46E /* VarsAndCons.swift in Sources */,
 				548EE196299F54BB0029A3EB /* BubbleLevel.swift in Sources */,
 				548EE186299F3DD90029A3EB /* Gyroscope.swift in Sources */,
 				548EE198299F54CE0029A3EB /* MotionDetector.swift in Sources */,
 				54FEFC9929A1BC8B0079E46E /* SoftButton.swift in Sources */,
+				54FEFCA029A1D5350079E46E /* CalculatorSuggestions.swift in Sources */,
 				548EE18E299F49AC0029A3EB /* IMU.swift in Sources */,
 				548EE188299F490B0029A3EB /* Magnetometer.swift in Sources */,
 				54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */,
@@ -252,6 +267,7 @@
 				54FEFC9729A1BC430079E46E /* Clock.swift in Sources */,
 				548EE191299F4CED0029A3EB /* Barometer.swift in Sources */,
 				548EE178299F3DB70029A3EB /* SwiftyScienceApp.swift in Sources */,
+				54FEFC9E29A1D15C0079E46E /* MainCalculatorButtons.swift in Sources */,
 				548EE1A3299F57BC0029A3EB /* CalculatorView.swift in Sources */,
 				548EE19E299F55270029A3EB /* Ext - Double.swift in Sources */,
 				548EE19A299F54F40029A3EB /* LevelView.swift in Sources */,

@@ -15,178 +15,73 @@ struct Calculator: View {
     @State private var expression = ""
     @State private var result = ""
     
+    @State var showingTrig: Bool = false
+    @State var showingVars: Bool = false
+    @State var showingExps: Bool = false
+    @State var showingCons: Bool = true
+    
+    @State var variables: [String:Double] = [:]
+    
     var body: some View {
-        VStack {
-            Text(expression)
-            Text(result)
-            Grid(horizontalSpacing: 5, verticalSpacing: 5) {
-                GridRow {
-                    Button("c") {
-                        self.expression = ""
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("ce") {
-                        self.history = ""
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("(") {
-                        self.expression += "("
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button(")") {
-                        self.expression += ")"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
+        ZStack {
+            Color.black.opacity(0.5)
+            VStack {
+//                Text(expression)
+                ExpressionField(expression: $expression)
+                    .padding(.horizontal)
+                    .padding(.top, 60)
+//                Text(result)
+                ExpressionField(expression: $result)
+                    .padding(.horizontal)
+                Spacer()
+                if showingVars {
+                    Variables(
+                        history: $history,
+                        expression: $expression,
+                        result: $result,
+                        showingVars: $showingVars
+                    )
+                    .padding(.horizontal)
+                } else {
+                    Spacer()
                 }
-                GridRow {
-                    Button("7") {
-                        self.expression += "7"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("8") {
-                        self.expression += "8"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("9") {
-                        self.expression += "9"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("/") {
-                        self.expression += "/"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.orange)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
+                
+                if showingCons {
+                    Constants(
+                        history: $history,
+                        expression: $expression,
+                        result: $result,
+                        showingCons: $showingCons
+                    )
+                    .padding(.horizontal)
+                } else {
+                    Spacer()
                 }
-                GridRow {
-                    Button("4") {
-                        self.expression += "4"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("5") {
-                        self.expression += "5"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("6") {
-                        self.expression += "6"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("*") {
-                        self.expression += "*"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.orange)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
+                
+                if showingTrig {
+                    Trigs(
+                        history: $history,
+                        expression: $expression,
+                        result: $result,
+                        showingTrig: $showingTrig
+                    )
+                    .padding(.horizontal)
+                } else {
+                    Spacer()
                 }
-                GridRow {
-                    Button("1") {
-                        self.expression += "1"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("2") {
-                        self.expression += "2"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("3") {
-                        self.expression += "3"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("-") {
-                        self.expression += "-"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.orange)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                }
-                GridRow {
-                    
-                    Button("0") {
-                        self.expression += "0"
-                    }
-                    .frame(width: 110, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    .gridCellColumns(2)
-                    Button(".") {
-                        self.expression += "."
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    Button("+") {
-                        self.expression += "+"
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(Color.orange)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    
-                }
-                GridRow {
-                    Button("Shift") {
-//                        self.expression += "+"
-                    }
-                    .frame(width: 110, height: 50)
-                    .background(Color.gray)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    .gridCellColumns(2)
-                    Button("=") {
-                        evaluateExpression()
-                    }
-                    .frame(width: 110, height: 50)
-                    .background(Color.orange)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    .gridCellColumns(2)
+                
+                Spacer()
+                CalculatorSuggestions(showingTrig: $showingTrig, showingVars: $showingVars, showingExps: $showingExps, showingCons: $showingCons)
+                    .padding(.horizontal)
+                HStack {
+                    AuxCalculatorButtons(showingTrig: $showingTrig, showingVars: $showingVars, showingExps: $showingExps, showingCons: $showingCons)
+                    MainCalculatorButtons(history: $history, expression: $expression, result: $result)
                 }
                 
             }
+            .padding(.bottom)
         }
+        .ignoresSafeArea()
     }
     
     func evaluateExpression() {
@@ -205,3 +100,8 @@ struct Calculator_Previews: PreviewProvider {
         Calculator()
     }
 }
+
+
+
+
+
