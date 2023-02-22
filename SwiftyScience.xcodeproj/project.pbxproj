@@ -25,6 +25,7 @@
 		548EE19E299F55270029A3EB /* Ext - Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE19D299F55270029A3EB /* Ext - Double.swift */; };
 		548EE1A3299F57BC0029A3EB /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE1A2299F57BC0029A3EB /* CalculatorView.swift */; };
 		548EE1A5299F63840029A3EB /* ShiftableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EE1A4299F63840029A3EB /* ShiftableButton.swift */; };
+		54B08CE829A6B30C00FE4F48 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B08CE729A6B30C00FE4F48 /* ExportView.swift */; };
 		54FEFC9329A1BBFE0079E46E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9229A1BBFE0079E46E /* Timer.swift */; };
 		54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9429A1BC190079E46E /* Stopwatch.swift */; };
 		54FEFC9729A1BC430079E46E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9629A1BC430079E46E /* Clock.swift */; };
@@ -33,6 +34,7 @@
 		54FEFC9E29A1D15C0079E46E /* MainCalculatorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9D29A1D15C0079E46E /* MainCalculatorButtons.swift */; };
 		54FEFCA029A1D5350079E46E /* CalculatorSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9F29A1D5350079E46E /* CalculatorSuggestions.swift */; };
 		54FEFCA429A1D6BE0079E46E /* VarsAndCons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFCA329A1D6BE0079E46E /* VarsAndCons.swift */; };
+		54FEFCA729A1E96D0079E46E /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFCA629A1E96D0079E46E /* Haptics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		548EE19D299F55270029A3EB /* Ext - Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext - Double.swift"; sourceTree = "<group>"; };
 		548EE1A2299F57BC0029A3EB /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		548EE1A4299F63840029A3EB /* ShiftableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftableButton.swift; sourceTree = "<group>"; };
+		54B08CE629A6B18600FE4F48 /* SwiftyScience.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftyScience.entitlements; sourceTree = "<group>"; };
+		54B08CE729A6B30C00FE4F48 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
 		54FEFC9229A1BBFE0079E46E /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		54FEFC9429A1BC190079E46E /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		54FEFC9629A1BC430079E46E /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 		54FEFC9D29A1D15C0079E46E /* MainCalculatorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCalculatorButtons.swift; sourceTree = "<group>"; };
 		54FEFC9F29A1D5350079E46E /* CalculatorSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSuggestions.swift; sourceTree = "<group>"; };
 		54FEFCA329A1D6BE0079E46E /* VarsAndCons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarsAndCons.swift; sourceTree = "<group>"; };
+		54FEFCA629A1E96D0079E46E /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +100,10 @@
 		548EE176299F3DB70029A3EB /* SwiftyScience */ = {
 			isa = PBXGroup;
 			children = (
+				54B08CE629A6B18600FE4F48 /* SwiftyScience.entitlements */,
 				548EE177299F3DB70029A3EB /* SwiftyScienceApp.swift */,
+				54B08CE929A6B30F00FE4F48 /* HealthKit */,
+				54B08CE529A6B11400FE4F48 /* Haptics */,
 				54FEFCA529A1E7010079E46E /* Sensors */,
 				54FEFC9A29A1BCA10079E46E /* UI */,
 				54FEFC9129A1BBEB0079E46E /* Clock */,
@@ -149,6 +157,22 @@
 				548BB2FE29A0B33A00899AD6 /* Calculator.swift */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		54B08CE529A6B11400FE4F48 /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				54FEFCA629A1E96D0079E46E /* Haptics.swift */,
+			);
+			path = Haptics;
+			sourceTree = "<group>";
+		};
+		54B08CE929A6B30F00FE4F48 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				54B08CE729A6B30C00FE4F48 /* ExportView.swift */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 		54FEFC9129A1BBEB0079E46E /* Clock */ = {
@@ -264,10 +288,12 @@
 				54FEFC9929A1BC8B0079E46E /* SoftButton.swift in Sources */,
 				54FEFCA029A1D5350079E46E /* CalculatorSuggestions.swift in Sources */,
 				548EE18E299F49AC0029A3EB /* IMU.swift in Sources */,
+				54B08CE829A6B30C00FE4F48 /* ExportView.swift in Sources */,
 				548EE188299F490B0029A3EB /* Magnetometer.swift in Sources */,
 				54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */,
 				548EE19C299F55040029A3EB /* OrientationDataView.swift in Sources */,
 				548EE1A5299F63840029A3EB /* ShiftableButton.swift in Sources */,
+				54FEFCA729A1E96D0079E46E /* Haptics.swift in Sources */,
 				54FEFC9329A1BBFE0079E46E /* Timer.swift in Sources */,
 				548EE18A299F49190029A3EB /* Accelerometer.swift in Sources */,
 				548BB2FF29A0B33A00899AD6 /* Calculator.swift in Sources */,
@@ -404,12 +430,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftyScience/SwiftyScience.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftyScience/Preview Content\"";
 				DEVELOPMENT_TEAM = BRJ8Q7JWBR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Health Records needed.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Health Share needed.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Health update needed.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -433,12 +463,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftyScience/SwiftyScience.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftyScience/Preview Content\"";
 				DEVELOPMENT_TEAM = BRJ8Q7JWBR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Health Records needed.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Health Share needed.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Health update needed.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
