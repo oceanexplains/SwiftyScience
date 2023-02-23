@@ -11,6 +11,9 @@ import HealthKit
 
 
 class HealthKitManager: ObservableObject {
+    
+    static let shared = HealthKitManager()
+    
     let healthStore = HKHealthStore()
     
     //MARK: Sleep
@@ -248,6 +251,13 @@ class HealthKitManager: ObservableObject {
     
     //MARK: To Write
     let healthKitTypesToWrite: Set<HKSampleType> = []
+    
+    
+    
+    //MARK: Mark for Export
+    @Published var exportedProperties: [HKObjectType] = []
+    
+    
     
 }
 
