@@ -12,6 +12,7 @@ import HealthKitUI
 struct HealthKitPreferencesView: View {
     
     //MARK: Section Toggles
+    @State var showActivities: Bool = false
     @State var showHealthMetrics: Bool = false
     @State var showAbdominal: Bool = false
     @State var showConstitutional: Bool = false
@@ -75,6 +76,15 @@ struct HealthKitPreferencesView: View {
     @State var sleepChanges: Bool = false
     @State var bladderIncontinence: Bool = false
     
+    //MARK: Activity
+    @State var stepCount: Bool = false
+    @State var distanceWalkingRunning: Bool = false
+    @State var runningGroundContactTime: Bool = false
+    @State var runningPower: Bool = false
+    @State var runningSpeed: Bool = false
+    @State var runningStrideLength: Bool = false
+    @State var runningVerticalOscillation: Bool = false
+    @State var distanceCycling: Bool = false
     
     //MARK: Properties
     @State var properties: [HKObjectType] = []
@@ -86,6 +96,123 @@ struct HealthKitPreferencesView: View {
 
 
         List {
+            
+            
+            Group {
+                Section("Activities") {
+                    
+                    Group {
+                        Toggle(isOn: showActivities) {
+                            Image(systemName: "airplane")
+                            Text("Show Activities")
+                        }
+                        if showActivities {
+                            Toggle("Step Count", isOn: $stepCount)
+                                .onChange(of: stepCount) { value in
+                                    if value {
+                                        manager.exportedProperties.append(
+                                            HKObjectType.quantityType(forIdentifier: .stepCount)!
+                                        )
+                                    } else {
+                                        manager.exportedProperties.removeAll(
+                                            where: { $0 == HKObjectType.quantityType(forIdentifier: .stepCount) }
+                                        )
+                                    }
+                                }
+                            Toggle("Walking/Running Distance", isOn: $distanceWalkingRunning)
+                                .onChange(of: distanceWalkingRunning) { value in
+                                    if value {
+                                        manager.exportedProperties.append(
+                                            HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!
+                                        )
+                                    } else {
+                                        manager.exportedProperties.removeAll(
+                                            where: { $0 == HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning) }
+                                        )
+                                    }
+                                }
+                            Toggle("Running Ground Contact Time", isOn: $runningGroundContactTime)
+                                .onChange(of: runningGroundContactTime) { value in
+                                    if value {
+                                        manager.exportedProperties.append(
+                                            HKObjectType.quantityType(forIdentifier: .runningGroundContactTime)!
+                                        )
+                                    } else {
+                                        manager.exportedProperties.removeAll(
+                                            where: { $0 == HKObjectType.quantityType(forIdentifier: .runningGroundContactTime) }
+                                        )
+                                    }
+                                }
+                            Toggle("Running Power", isOn: $runningPower)
+                                .onChange(of: runningPower) { value in
+                                    if value {
+                                        manager.exportedProperties.append(
+                                            HKObjectType.quantityType(forIdentifier: .runningPower)!
+                                        )
+                                    } else {
+                                        manager.exportedProperties.removeAll(
+                                            where: { $0 == HKObjectType.quantityType(forIdentifier: .runningPower) }
+                                        )
+                                    }
+                                }
+                            Toggle("Running Speed", isOn: $runningSpeed)
+                                .onChange(of: runningSpeed) { value in
+                                    if value {
+                                        manager.exportedProperties.append(
+                                            HKObjectType.quantityType(forIdentifier: .runningSpeed)!
+                                        )
+                                    } else {
+                                        manager.exportedProperties.removeAll(
+                                            where: { $0 == HKObjectType.quantityType(forIdentifier: .runningSpeed) }
+                                        )
+                                    }
+                                }
+                            Toggle("Running Stride Length", isOn: $runningStrideLength)
+                                .onChange(of: runningStrideLength) { value in
+                                    if value {
+                                        manager.exportedProperties.append(
+                                            HKObjectType.quantityType(forIdentifier: .runningStrideLength)!
+                                        )
+                                    } else {
+                                        manager.exportedProperties.removeAll(
+                                            where: { $0 == HKObjectType.quantityType(forIdentifier: .runningStrideLength) }
+                                        )
+                                    }
+                                }
+                            Toggle("Running Vertical Oscillation", isOn: $runningVerticalOscillation)
+                                .onChange(of: runningVerticalOscillation) { value in
+                                    if value {
+                                        manager.exportedProperties.append(
+                                            HKObjectType.quantityType(forIdentifier: .runningVerticalOscillation)!
+                                        )
+                                    } else {
+                                        manager.exportedProperties.removeAll(
+                                            where: { $0 == HKObjectType.quantityType(forIdentifier: .runningVerticalOscillation) }
+                                        )
+                                    }
+                                }
+                            Toggle("Cycling Distance", isOn: $distanceCycling)
+                                .onChange(of: distanceCycling) { value in
+                                    if value {
+                                        manager.exportedProperties.append(
+                                            HKObjectType.quantityType(forIdentifier: .distanceCycling)!
+                                        )
+                                    } else {
+                                        manager.exportedProperties.removeAll(
+                                            where: { $0 == HKObjectType.quantityType(forIdentifier: .distanceCycling) }
+                                        )
+                                    }
+                                }
+                        }
+                        
+                        //MARK: Continue Here
+                        #warning("Complete starting here")
+                    }
+                    
+                }
+            }
+            
+            
             Group {
                 Section("Health Metrics") {
                     Toggle(isOn: $showHealthMetrics) {

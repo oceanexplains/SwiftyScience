@@ -29,7 +29,6 @@
 		54B08CEC29A6D97100FE4F48 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B08CEB29A6D97100FE4F48 /* HealthKitManager.swift */; };
 		54B08CEF29A6E6AB00FE4F48 /* SymptomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B08CEE29A6E6AB00FE4F48 /* SymptomListView.swift */; };
 		54B08CF129A6E78300FE4F48 /* Symptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B08CF029A6E78300FE4F48 /* Symptoms.swift */; };
-		54B08CF429A7009D00FE4F48 /* HealthMetricsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B08CF329A7009D00FE4F48 /* HealthMetricsListView.swift */; };
 		54B08CF629A7017F00FE4F48 /* HealthKitPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B08CF529A7017F00FE4F48 /* HealthKitPreferencesView.swift */; };
 		54FEFC9329A1BBFE0079E46E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9229A1BBFE0079E46E /* Timer.swift */; };
 		54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEFC9429A1BC190079E46E /* Stopwatch.swift */; };
@@ -67,7 +66,6 @@
 		54B08CEB29A6D97100FE4F48 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		54B08CEE29A6E6AB00FE4F48 /* SymptomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomListView.swift; sourceTree = "<group>"; };
 		54B08CF029A6E78300FE4F48 /* Symptoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symptoms.swift; sourceTree = "<group>"; };
-		54B08CF329A7009D00FE4F48 /* HealthMetricsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMetricsListView.swift; sourceTree = "<group>"; };
 		54B08CF529A7017F00FE4F48 /* HealthKitPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPreferencesView.swift; sourceTree = "<group>"; };
 		54FEFC9229A1BBFE0079E46E /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		54FEFC9429A1BC190079E46E /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				54B08CEE29A6E6AB00FE4F48 /* SymptomListView.swift */,
-				54B08CF329A7009D00FE4F48 /* HealthMetricsListView.swift */,
 				54B08CE729A6B30C00FE4F48 /* ExportView.swift */,
 				54B08CF529A7017F00FE4F48 /* HealthKitPreferencesView.swift */,
 			);
@@ -327,7 +324,6 @@
 				54FEFC9529A1BC190079E46E /* Stopwatch.swift in Sources */,
 				548EE19C299F55040029A3EB /* OrientationDataView.swift in Sources */,
 				548EE1A5299F63840029A3EB /* ShiftableButton.swift in Sources */,
-				54B08CF429A7009D00FE4F48 /* HealthMetricsListView.swift in Sources */,
 				54FEFCA729A1E96D0079E46E /* Haptics.swift in Sources */,
 				54FEFC9329A1BBFE0079E46E /* Timer.swift in Sources */,
 				548EE18A299F49190029A3EB /* Accelerometer.swift in Sources */,
