@@ -8,8 +8,6 @@
 import SwiftUI
 import MathExpression
 
-
-
 struct Calculator: View {
     @State private var history = ""
     @State private var expression = ""
@@ -26,14 +24,15 @@ struct Calculator: View {
         ZStack {
             Color.black.opacity(0.5)
             VStack {
-//                Text(expression)
                 ExpressionField(expression: $expression)
-                    .padding(.horizontal)
+                    .padding(.horizontal, 20)
                     .padding(.top, 60)
-//                Text(result)
+                
                 ExpressionField(expression: $result)
-                    .padding(.horizontal)
+                    .padding(.horizontal, 20)
+                
                 Spacer()
+                
                 if showingVars {
                     Variables(
                         history: $history,
@@ -41,7 +40,7 @@ struct Calculator: View {
                         result: $result,
                         showingVars: $showingVars
                     )
-                    .padding(.horizontal)
+                    .padding(.horizontal, 20)
                 } else {
                     Spacer()
                 }
@@ -53,7 +52,7 @@ struct Calculator: View {
                         result: $result,
                         showingCons: $showingCons
                     )
-                    .padding(.horizontal)
+                    .padding(.horizontal, 20)
                 } else {
                     Spacer()
                 }
@@ -65,35 +64,32 @@ struct Calculator: View {
                         result: $result,
                         showingTrig: $showingTrig
                     )
-                    .padding(.horizontal)
+                    .padding(.horizontal, 20)
                 } else {
                     Spacer()
                 }
                 
                 Spacer()
+                
                 CalculatorSuggestions(showingTrig: $showingTrig, showingVars: $showingVars, showingExps: $showingExps, showingCons: $showingCons)
-                    .padding(.horizontal)
+                    .padding(.horizontal, 20)
+                
                 HStack {
                     AuxCalculatorButtons(showingTrig: $showingTrig, showingVars: $showingVars, showingExps: $showingExps, showingCons: $showingCons)
+                    
                     MainCalculatorButtons(history: $history, expression: $expression, result: $result)
                 }
+                .padding(.horizontal, 20)
                 
             }
             .padding(.bottom)
+            .foregroundColor(.white)
+            .font(.system(size: 24))
         }
         .ignoresSafeArea()
     }
-    
-    func evaluateExpression() {
-        do {
-            let math = try MathExpression(expression)
-            result = String(math.evaluate())
-            expression = ""
-        } catch {
-            print("Error evaluating expression: \(error)")
-        }
-    }
 }
+
 
 struct Calculator_Previews: PreviewProvider {
     static var previews: some View {

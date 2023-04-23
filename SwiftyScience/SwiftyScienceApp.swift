@@ -17,8 +17,8 @@ struct SwiftyScienceApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            ExportView()
-//            Calculator()
+//            ExportView()
+            Calculator()
             //ClockView()
 //            LevelView().environmentObject(motionDetector)
         }
